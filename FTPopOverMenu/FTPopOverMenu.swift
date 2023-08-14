@@ -15,7 +15,7 @@ extension FTPopOverMenu {
     }
 
     public class func showForEvent(event: UIEvent, with menuArray: [FTMenuObject], menuImageArray: [Imageable]? = nil, popOverPosition: FTPopOverPosition = .automatic, config: FTConfiguration? = nil, done: ((NSInteger)->())?, cancel: (()->())? = nil) {
-        FTPopOverMenu.shared.showForSender(sender: event.allTouches?.first?.view!, or: nil, with: menuArray, menuImageArray: menuImageArray, popOverPosition: popOverPosition, config: config, done: done, cancel: cancel)
+        FTPopOverMenu.shared.showForSender(sender: event.allTouches?.first?.view, or: nil, with: menuArray, menuImageArray: menuImageArray, popOverPosition: popOverPosition, config: config, done: done, cancel: cancel)
     }
 
     public class func showFromSenderFrame(senderFrame: CGRect, with menuArray: [FTMenuObject], menuImageArray: [Imageable]? = nil,popOverPosition: FTPopOverPosition = .automatic, config: FTConfiguration? = nil, done: ((NSInteger)->())?, cancel: (()->())? = nil) {
